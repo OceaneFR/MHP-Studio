@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Graphique Freelance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-light: #F5F1E8;
+            --color-gold: #D4AF37;
+            --color-dark: #3D3D3D;
+            --color-white: #FFFFFF;
+            --color-text: #2C2C2C;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Georgia', 'Garamond', serif;
+            background-color: var(--color-light);
+            color: var(--color-text);
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            padding: 60px;
+            gap: 80px;
+        }
+
+        /* SECTION GAUCHE */
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* HEADER GAUCHE */
+        .header-left {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .logo-container {
+            min-width: 150px;
+            width: 150px;
+            height: 150px;
+            background-color: var(--color-white);
+            border: 2px solid var(--color-gold);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--color-dark);
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .intro-text h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .intro-text p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: 0;
+        }
+
+        /* SERVICES SECTION (BAS GAUCHE) */
+        .services-section {
+            display: flex;
+            gap: 60px;
+        }
+
+        .service {
+            flex: 1;
+        }
+
+        .service h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-gold);
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .service p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        /* SECTION DROITE - CONTACT */
+        .right-section {
+            flex: 0 0 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .contact-info h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-gold);
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .contact-info p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: var(--color-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--color-gold);
+        }
+
+        /* RESPONSIVE - TABLET */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                padding: 40px;
+                gap: 40px;
+            }
+
+            .right-section {
+                flex: 1;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .logo-container {
+                width: 120px;
+                height: 120px;
+            }
+
+            .intro-text h1 {
+                font-size: 28px;
+            }
+
+            .header-left {
+                gap: 30px;
+            }
+
+            .services-section {
+                gap: 40px;
+            }
+        }
+
+        /* RESPONSIVE - MOBILE */
+        @media (max-width: 650px) {
+            html, body {
+                overflow: auto;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 30px;
+                gap: 30px;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .header-left {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .logo-container {
+                width: 100px;
+                height: 100px;
+            }
+
+            .intro-text h1 {
+                font-size: 24px;
+            }
+
+            .intro-text p {
+                font-size: 14px;
+            }
+
+            .services-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .right-section {
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SECTION GAUCHE -->
+        <div class="left-section">
+            <!-- HAUT GAUCHE : LOGO + INTRO -->
+            <div class="header-left">
+                <div class="logo-container">XXLOGOXX</div>
+                <div class="intro-text">
+                    <h1>Créatrice graphique</h1>
+                    <p>Je crée une identité visuelle forte et des supports de communication cohérents pour faire ressortir votre marque.</p>
+                </div>
+            </div>
+
+            <!-- BAS GAUCHE : SERVICES -->
+            <div class="services-section">
+                <div class="service">
+                    <h3>Identité Visuelle</h3>
+                    <p>Logo, charte graphique, typographie</p>
+                </div>
+                <div class="service">
+                    <h3>Supports de Communication</h3>
+                    <p>Cartes de visite, flyers, affiches, bannières web, etc.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION DROITE : CONTACT -->
+        <div class="right-section">
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p>
+                    <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a>
+                    <br>
+                    <a href="mailto:hello@example.com">hello@example.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
