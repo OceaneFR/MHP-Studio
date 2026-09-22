@@ -15,10 +15,11 @@
             --color-bg: #1B4D5F;
             --color-accent: #FFFFFF;
             --color-card-bg: #FFFFFF;
+            --color-title-blue: #1B4D5F;
             --color-dark: #1A1A1A;
             --color-text: #2C2C2C;
             --color-white: #FFFFFF;
-            --color-footer: #999999;
+            --color-footer: #FFFFFF;
         }
 
         html, body {
@@ -76,7 +77,7 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -85,6 +86,7 @@
             line-height: 1.7;
             color: var(--color-white);
             margin: 0;
+            white-space: nowrap;
         }
 
         .intro-text p:first-child {
@@ -120,7 +122,7 @@
         .service-card h3 {
             font-size: 20px;
             margin: 0;
-            color: var(--color-dark);
+            color: var(--color-title-blue);
             font-weight: normal;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -129,13 +131,13 @@
             font-family: 'Arial', 'Helvetica', sans-serif;
         }
 
-        /* PETIT TRAIT SOUS LES TITRES - BLANC/ACCENT */
+        /* PETIT TRAIT SOUS LES TITRES - BLEU */
         .service-card h3::after {
             content: '';
             display: block;
             width: 60px;
             height: 2px;
-            background-color: var(--color-accent);
+            background-color: var(--color-title-blue);
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -151,10 +153,12 @@
 
         /* SOUS-TEXTE SERVICES (digital & print) */
         .service-subtitle {
-            font-size: 13px;
-            color: var(--color-dark);
+            font-size: 16px;
+            color: var(--color-title-blue);
             font-style: italic;
-            margin-top: 3px;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            font-family: 'Arial', 'Helvetica', sans-serif;
         }
 
         /* SERVICES DESCRIPTION DÉTAILLÉE */
@@ -162,23 +166,57 @@
             margin-top: 5px;
         }
 
-        /* SECTION BAS - FOOTER CENTRÉ */
+        /* SECTION BAS - FOOTER + CONTACT */
         .bottom-section {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-end;
+            gap: 50px;
         }
 
-        /* FOOTER CENTRÉ EN BAS */
+        /* FOOTER */
         footer {
-            text-align: center;
+            text-align: left;
             font-size: 12px;
             color: var(--color-footer);
         }
 
-        /* CONTACT SECTION - HIDDEN DANS CETTE VERSION */
+        /* CONTACT SECTION */
         .contact-section {
-            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        .contact-info h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-accent);
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            color: var(--color-white);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .contact-info a {
+            color: var(--color-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--color-accent);
         }
 
         /* RESPONSIVE - TABLET */
@@ -237,6 +275,7 @@
 
             .intro-text p {
                 font-size: 14px;
+                white-space: normal;
                 max-width: 100%;
             }
 
@@ -251,6 +290,21 @@
                 max-width: 340px;
                 height: auto;
                 min-height: 180px;
+            }
+
+            .bottom-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-section {
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
             }
 
             footer {
@@ -284,6 +338,7 @@
 
             .intro-text p {
                 font-size: 13px;
+                white-space: normal;
             }
 
             .services-section {
@@ -305,6 +360,15 @@
 
             .service-card p {
                 font-size: 12px;
+            }
+
+            .bottom-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info p {
+                font-size: 13px;
             }
 
             footer {
@@ -341,11 +405,21 @@
             </div>
         </div>
 
-        <!-- SECTION BAS - FOOTER CENTRÉ -->
+        <!-- SECTION BAS - FOOTER + CONTACT -->
         <div class="bottom-section">
             <footer>
                 <p>&copy; 2026 Tous droits réservés. Réalisé par MHP Studio.</p>
             </footer>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h4>Contact</h4>
+                    <p>
+                        <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a>
+                        <br>
+                        <a href="mailto:hello@example.com">hello@example.com</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
