@@ -12,20 +12,20 @@
         }
 
         :root {
-            --color-light: #FFFFFF;
-            --color-accent: #1B4D5F;
-            --color-card-bg: #2C3E4F;
+            --color-bg: #1B4D5F;
+            --color-accent: #FFFFFF;
+            --color-card-bg: #FFFFFF;
             --color-dark: #1A1A1A;
             --color-text: #2C2C2C;
             --color-white: #FFFFFF;
-            --color-footer: #AAAAAA;
+            --color-footer: #999999;
         }
 
         html, body {
             width: 100%;
             height: 100%;
             font-family: 'Georgia', 'Garamond', serif;
-            background-color: var(--color-light);
+            background-color: var(--color-bg);
             color: var(--color-text);
             overflow: hidden;
         }
@@ -55,7 +55,7 @@
         .logo-container {
             width: 280px;
             height: 120px;
-            background-color: var(--color-white);
+            background-color: var(--color-card-bg);
             border: 3px solid var(--color-accent);
             border-radius: 12px;
             display: flex;
@@ -76,15 +76,19 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .intro-text p {
             font-size: 16px;
             line-height: 1.7;
-            color: var(--color-text);
+            color: var(--color-white);
             margin: 0;
+        }
+
+        .intro-text p:first-child {
+            margin-bottom: 0;
         }
 
         /* SERVICES SECTION - CENTRÉE */
@@ -101,12 +105,12 @@
             width: 380px;
             height: 220px;
             background-color: var(--color-card-bg);
-            color: var(--color-white);
+            color: var(--color-dark);
             padding: 45px 35px;
             border-radius: 12px;
             text-align: center;
             border: 4px solid var(--color-accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -114,17 +118,18 @@
         }
 
         .service-card h3 {
-            font-size: 21px;
+            font-size: 20px;
             margin: 0;
-            color: var(--color-white);
+            color: var(--color-dark);
             font-weight: normal;
             letter-spacing: 1px;
             text-transform: uppercase;
             position: relative;
             padding-bottom: 12px;
+            font-family: 'Arial', 'Helvetica', sans-serif;
         }
 
-        /* PETIT TRAIT SOUS LES TITRES */
+        /* PETIT TRAIT SOUS LES TITRES - BLANC/ACCENT */
         .service-card h3::after {
             content: '';
             display: block;
@@ -138,68 +143,42 @@
         }
 
         .service-card p {
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.6;
-            color: var(--color-white);
+            color: var(--color-dark);
             margin: 0;
         }
 
-        /* SECTION BAS - CONTACT + FOOTER */
-        .bottom-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 50px;
+        /* SOUS-TEXTE SERVICES (digital & print) */
+        .service-subtitle {
+            font-size: 13px;
+            color: var(--color-dark);
+            font-style: italic;
+            margin-top: 3px;
         }
 
-        /* FOOTER À GAUCHE */
+        /* SERVICES DESCRIPTION DÉTAILLÉE */
+        .service-details {
+            margin-top: 5px;
+        }
+
+        /* SECTION BAS - FOOTER CENTRÉ */
+        .bottom-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        /* FOOTER CENTRÉ EN BAS */
         footer {
-            text-align: left;
+            text-align: center;
             font-size: 12px;
             color: var(--color-footer);
         }
 
-        /* CONTACT À DROITE */
+        /* CONTACT SECTION - HIDDEN DANS CETTE VERSION */
         .contact-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-align: right;
-        }
-
-        .contact-icon {
-            font-size: 32px;
-            color: var(--color-accent);
-        }
-
-        .contact-info {
-            text-align: right;
-        }
-
-        .contact-info h4 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--color-accent);
-            margin-bottom: 8px;
-            font-weight: normal;
-        }
-
-        .contact-info p {
-            font-size: 15px;
-            color: var(--color-dark);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .contact-info a {
-            color: var(--color-dark);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--color-accent);
+            display: none;
         }
 
         /* RESPONSIVE - TABLET */
@@ -230,11 +209,11 @@
             }
 
             .service-card h3 {
-                font-size: 19px;
+                font-size: 18px;
             }
 
             .service-card p {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
 
@@ -272,21 +251,6 @@
                 max-width: 340px;
                 height: auto;
                 min-height: 180px;
-            }
-
-            .bottom-section {
-                flex-direction: column-reverse;
-                align-items: center;
-                text-align: center;
-            }
-
-            .contact-section {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .contact-info {
-                text-align: center;
             }
 
             footer {
@@ -340,16 +304,7 @@
             }
 
             .service-card p {
-                font-size: 13px;
-            }
-
-            .bottom-section {
-                flex-direction: column-reverse;
-                align-items: center;
-            }
-
-            .contact-info p {
-                font-size: 13px;
+                font-size: 12px;
             }
 
             footer {
@@ -378,27 +333,19 @@
                 <p>Logo, charte graphique, typographie</p>
             </div>
             <div class="service-card">
-                <h3>Supports de Communication<br>(digital & print)</h3>
-                <p>Cartes de visite, flyers, affiches, bannières web, etc.</p>
+                <h3>Supports de Communication</h3>
+                <div class="service-subtitle">(digital & print)</div>
+                <div class="service-details">
+                    <p>Cartes de visite, flyers, affiches,<br>bannières web, etc.</p>
+                </div>
             </div>
         </div>
 
-        <!-- SECTION BAS - FOOTER + CONTACT -->
+        <!-- SECTION BAS - FOOTER CENTRÉ -->
         <div class="bottom-section">
             <footer>
                 <p>&copy; 2026 Tous droits réservés. Réalisé par MHP Studio.</p>
             </footer>
-            <div class="contact-section">
-                <div class="contact-icon">📞</div>
-                <div class="contact-info">
-                    <h4>Contact</h4>
-                    <p>
-                        <a href="tel:+33XXXXXXXXX">+33 X XX XX XX XX</a>
-                        <br>
-                        <a href="mailto:hello@example.com">hello@example.com</a>
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </body>
