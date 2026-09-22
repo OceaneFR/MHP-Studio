@@ -15,6 +15,7 @@
             --color-light: #F5F1E8;
             --color-gold: #D4AF37;
             --color-dark: #3D3D3D;
+            --color-charcoal: #4A4A4A;
             --color-white: #FFFFFF;
             --color-text: #2C2C2C;
         }
@@ -32,32 +33,29 @@
             width: 100%;
             height: 100vh;
             display: flex;
-            padding: 60px;
-            gap: 80px;
+            flex-direction: column;
+            padding: 40px 60px;
+            gap: 30px;
         }
 
-        /* SECTION GAUCHE */
-        .left-section {
+        /* SECTION HAUT - CENTRÉ */
+        .top-section {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
         }
 
-        /* HEADER GAUCHE */
-        .header-left {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
+        /* LOGO CENTRÉ */
         .logo-container {
-            min-width: 150px;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             background-color: var(--color-white);
-            border: 2px solid var(--color-gold);
-            border-radius: 8px;
+            border: 3px solid var(--color-gold);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,77 +63,101 @@
             color: var(--color-dark);
             text-align: center;
             flex-shrink: 0;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 48px;
+            font-weight: bold;
         }
 
+        /* TITRE */
         .intro-text h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+            font-size: 42px;
+            margin-bottom: 15px;
             color: var(--color-dark);
             font-weight: normal;
             letter-spacing: 1px;
         }
 
+        /* TEXTE D'ACCROCHE */
         .intro-text p {
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.7;
             color: var(--color-text);
-            margin-bottom: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* SERVICES SECTION (BAS GAUCHE) */
+        /* SERVICES SECTION - CENTRÉE */
         .services-section {
             display: flex;
-            gap: 60px;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 20px;
         }
 
-        .service {
-            flex: 1;
+        /* CARTES DE SERVICE */
+        .service-card {
+            width: 350px;
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
         }
 
-        .service h3 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--color-gold);
+        .service-card h3 {
+            font-size: 22px;
             margin-bottom: 15px;
+            color: var(--color-white);
             font-weight: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .service p {
+        .service-card p {
             font-size: 14px;
             line-height: 1.6;
-            color: var(--color-text);
+            color: var(--color-white);
         }
 
-        /* SECTION DROITE - CONTACT */
-        .right-section {
-            flex: 0 0 250px;
+        /* FOOTER */
+        footer {
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* SECTION CONTACT - BAS DROITE */
+        .contact-section {
             display: flex;
-            flex-direction: column;
             justify-content: flex-end;
+            align-items: flex-end;
+            gap: 30px;
+        }
+
+        .contact-info {
             text-align: right;
         }
 
         .contact-info h4 {
-            font-size: 12px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--color-gold);
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             font-weight: normal;
         }
 
         .contact-info p {
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 18px;
             color: var(--color-text);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         .contact-info a {
             color: var(--color-dark);
             text-decoration: none;
-            font-size: 14px;
             transition: color 0.3s ease;
         }
 
@@ -146,32 +168,36 @@
         /* RESPONSIVE - TABLET */
         @media (max-width: 1024px) {
             .container {
-                flex-direction: column;
-                padding: 40px;
-                gap: 40px;
-            }
-
-            .right-section {
-                flex: 1;
-                justify-content: flex-start;
-                text-align: left;
-            }
-
-            .logo-container {
-                width: 120px;
-                height: 120px;
+                padding: 30px;
+                gap: 20px;
             }
 
             .intro-text h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
-            .header-left {
-                gap: 30px;
+            .intro-text p {
+                font-size: 15px;
             }
 
             .services-section {
-                gap: 40px;
+                flex-direction: column;
+                gap: 25px;
+                align-items: center;
+            }
+
+            .service-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .contact-section {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
             }
         }
 
@@ -182,27 +208,23 @@
             }
 
             .container {
-                flex-direction: column;
-                padding: 30px;
-                gap: 30px;
                 height: auto;
-                min-height: 100vh;
+                padding: 20px;
+                gap: 20px;
             }
 
-            .header-left {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            .top-section {
                 gap: 20px;
             }
 
             .logo-container {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
+                font-size: 36px;
             }
 
             .intro-text h1 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .intro-text p {
@@ -211,47 +233,47 @@
 
             .services-section {
                 flex-direction: column;
-                gap: 30px;
+                gap: 20px;
             }
 
-            .right-section {
-                text-align: center;
+            .service-card {
+                width: 100%;
             }
 
-            .contact-info {
-                text-align: center;
+            .contact-info p {
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 11px;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- SECTION GAUCHE -->
-        <div class="left-section">
-            <!-- HAUT GAUCHE : LOGO + INTRO -->
-            <div class="header-left">
-                <div class="logo-container">XXLOGOXX</div>
-                <div class="intro-text">
-                    <h1>Créatrice graphique</h1>
-                    <p>Je crée une identité visuelle forte et des supports de communication cohérents pour faire ressortir votre marque.</p>
-                </div>
-            </div>
+        <!-- SECTION HAUT - LOGO + TITRE + TEXTE -->
+        <div class="top-section">
+            <div class="logo-container">XXLOGOXX</div>
+            <h1>Créatrice graphique</h1>
+            <p>Vous avez une idée, une marque, un projet ? Je vous accompagne dans sa création graphique.</p>
+        </div>
 
-            <!-- BAS GAUCHE : SERVICES -->
-            <div class="services-section">
-                <div class="service">
-                    <h3>Identité Visuelle</h3>
-                    <p>Logo, charte graphique, typographie</p>
-                </div>
-                <div class="service">
-                    <h3>Supports de Communication</h3>
-                    <p>Cartes de visite, flyers, affiches, bannières web, etc.</p>
-                </div>
+        <!-- SERVICES - CARTES GRIS ANTHRACITE -->
+        <div class="services-section">
+            <div class="service-card">
+                <h3>Identité Visuelle</h3>
+                <p>Logo, charte graphique, typographie</p>
+            </div>
+            <div class="service-card">
+                <h3>Supports de Communication</h3>
+                <p>Cartes de visite, flyers, affiches, bannières web, etc.</p>
             </div>
         </div>
 
-        <!-- SECTION DROITE : CONTACT -->
-        <div class="right-section">
+        <!-- SECTION BAS - CONTACT + FOOTER -->
+        <div class="contact-section">
             <div class="contact-info">
                 <h4>Contact</h4>
                 <p>
@@ -261,6 +283,10 @@
                 </p>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2026 Tous droits réservés. Réalisé par MHP Studio.</p>
+        </footer>
     </div>
 </body>
 </html>
