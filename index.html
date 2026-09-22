@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designer Graphique Freelance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Satisfy&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,14 +13,14 @@
         }
 
         :root {
-            --color-bg: #1B4D5F;
-            --color-accent: #FFFFFF;
+            --color-bg: #4E94DE;
+            --color-accent: #F5F1E8;
             --color-card-bg: #FFFFFF;
-            --color-title-blue: #1B4D5F;
+            --color-title-blue: #2B73C2;
             --color-dark: #1A1A1A;
             --color-text: #2C2C2C;
             --color-white: #FFFFFF;
-            --color-footer: #FFFFFF;
+            --color-footer: #F5F1E8;
         }
 
         html, body {
@@ -52,7 +53,7 @@
             padding-top: 20px;
         }
 
-        /* LOGO CENTRÉ - PLUS LARGE HORIZONTALEMENT */
+        /* LOGO CENTRÉ - AVEC NOM ET GRAPHIC DESIGNER */
         .logo-container {
             width: 280px;
             height: 120px;
@@ -60,16 +61,29 @@
             border: 3px solid var(--color-accent);
             border-radius: 12px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            color: var(--color-dark);
-            text-align: center;
+            gap: 8px;
             flex-shrink: 0;
-            font-family: 'Brush Script MT', cursive;
+        }
+
+        .logo-name {
+            font-family: 'Bebas Neue', sans-serif;
             font-size: 52px;
             font-weight: bold;
             letter-spacing: 2px;
+            color: var(--color-accent);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-family: 'Satisfy', cursive;
+            font-size: 20px;
+            color: var(--color-accent);
+            margin: 0;
+            font-weight: normal;
         }
 
         /* TEXTE D'ACCROCHE */
@@ -84,7 +98,7 @@
         .intro-text p {
             font-size: 16px;
             line-height: 1.7;
-            color: var(--color-white);
+            color: var(--color-accent);
             margin: 0;
             white-space: nowrap;
         }
@@ -151,7 +165,7 @@
         .service-card p {
             font-size: 14px;
             line-height: 1.6;
-            color: var(--color-dark);
+            color: #000000;
             margin: 0;
         }
 
@@ -205,19 +219,19 @@
 
         .contact-info p {
             font-size: 15px;
-            color: var(--color-white);
+            color: var(--color-accent);
             line-height: 1.6;
             margin: 0;
         }
 
         .contact-info a {
-            color: var(--color-white);
+            color: var(--color-accent);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
-            color: var(--color-accent);
+            color: var(--color-white);
         }
 
         /* FOOTER CENTRÉ */
@@ -238,7 +252,14 @@
             .logo-container {
                 width: 240px;
                 height: 110px;
+            }
+
+            .logo-name {
                 font-size: 48px;
+            }
+
+            .logo-subtitle {
+                font-size: 18px;
             }
 
             .intro-text p {
@@ -291,7 +312,14 @@
             .logo-container {
                 width: 220px;
                 height: 100px;
+            }
+
+            .logo-name {
                 font-size: 44px;
+            }
+
+            .logo-subtitle {
+                font-size: 16px;
             }
 
             .intro-text p {
@@ -354,7 +382,15 @@
             .logo-container {
                 width: 180px;
                 height: 85px;
+                gap: 5px;
+            }
+
+            .logo-name {
                 font-size: 36px;
+            }
+
+            .logo-subtitle {
+                font-size: 14px;
             }
 
             .intro-text p {
@@ -410,7 +446,10 @@
     <div class="container">
         <!-- SECTION HAUT - LOGO + TEXTE -->
         <div class="top-section">
-            <div class="logo-container">XXLOGOXX</div>
+            <div class="logo-container">
+                <h1 class="logo-name">XXNOMXX</h1>
+                <p class="logo-subtitle">Graphic Designer</p>
+            </div>
             <div class="intro-text">
                 <p>Vous avez une idée, une marque, un projet ? Je vous accompagne dans sa création graphique.</p>
                 <p>De votre identité visuelle à vos supports de communication, ensemble nous créons une image cohérente et professionnelle.</p>
