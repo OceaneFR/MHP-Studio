@@ -39,24 +39,6 @@
             flex-direction: column;
             padding: 50px 80px;
             gap: 35px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* FOND AVEC MOTIF EN BACKGROUND */
-        .container::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('pattern.png');
-            background-size: cover;
-            background-attachment: fixed;
-            opacity: 0.12;
-            z-index: -1;
-            pointer-events: none;
         }
 
         /* SECTION HAUT - LOGO + TEXTE */
@@ -67,14 +49,14 @@
             align-items: center;
             justify-content: flex-start;
             text-align: center;
-            gap: 10px;
+            gap: 25px;
             padding-top: 20px;
         }
 
         /* NOM DIRECTEMENT SUR FOND BLEU */
         .logo-name {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 156px;
+            font-size: 120px;
             font-weight: bold;
             letter-spacing: 3px;
             color: var(--color-accent);
@@ -89,7 +71,7 @@
             color: var(--color-accent);
             margin: 0;
             font-weight: normal;
-            margin-bottom: 20px;
+            margin-top: -10px;
         }
 
         /* TEXTE D'ACCROCHE */
@@ -99,6 +81,7 @@
             gap: 12px;
             max-width: 900px;
             margin: 0 auto;
+            margin-top: 20px;
         }
 
         .intro-text p {
@@ -256,11 +239,15 @@
             }
 
             .logo-name {
-                font-size: 120px;
+                font-size: 100px;
             }
 
             .logo-subtitle {
                 font-size: 48px;
+            }
+
+            .intro-text {
+                margin-top: 15px;
             }
 
             .intro-text p {
@@ -291,6 +278,7 @@
                 bottom: auto;
                 text-align: center;
                 align-items: center;
+                margin-bottom: 20px;
             }
 
             .contact-info {
@@ -311,11 +299,15 @@
             }
 
             .logo-name {
-                font-size: 90px;
+                font-size: 80px;
             }
 
             .logo-subtitle {
                 font-size: 36px;
+            }
+
+            .intro-text {
+                margin-top: 10px;
             }
 
             .intro-text p {
@@ -346,6 +338,7 @@
                 position: static;
                 align-items: center;
                 text-align: center;
+                margin-bottom: 15px;
             }
 
             .contact-info {
@@ -381,6 +374,11 @@
 
             .logo-subtitle {
                 font-size: 24px;
+                margin-top: -5px;
+            }
+
+            .intro-text {
+                margin-top: 15px;
             }
 
             .intro-text p {
@@ -418,6 +416,7 @@
                 position: static;
                 align-items: center;
                 text-align: center;
+                margin-bottom: 15px;
             }
 
             .contact-info p {
@@ -427,7 +426,7 @@
             footer {
                 text-align: center;
                 font-size: 11px;
-                margin-top: 15px;
+                margin-top: 10px;
             }
         }
     </style>
