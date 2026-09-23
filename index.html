@@ -39,6 +39,24 @@
             flex-direction: column;
             padding: 50px 80px;
             gap: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* FOND AVEC MOTIF EN BACKGROUND */
+        .container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('pattern.png');
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.12;
+            z-index: -1;
+            pointer-events: none;
         }
 
         /* SECTION HAUT - LOGO + TEXTE */
@@ -49,41 +67,29 @@
             align-items: center;
             justify-content: flex-start;
             text-align: center;
-            gap: 30px;
+            gap: 10px;
             padding-top: 20px;
         }
 
-        /* LOGO CENTRÉ - AVEC NOM ET GRAPHIC DESIGNER */
-        .logo-container {
-            width: 280px;
-            height: 120px;
-            background-color: var(--color-card-bg);
-            border: 3px solid var(--color-accent);
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            flex-shrink: 0;
-        }
-
+        /* NOM DIRECTEMENT SUR FOND BLEU */
         .logo-name {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 52px;
+            font-size: 156px;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: var(--color-accent);
             margin: 0;
             line-height: 1;
         }
 
+        /* GRAPHIC DESIGNER DIRECTEMENT SUR FOND BLEU */
         .logo-subtitle {
             font-family: 'Satisfy', cursive;
-            font-size: 20px;
+            font-size: 60px;
             color: var(--color-accent);
             margin: 0;
             font-weight: normal;
+            margin-bottom: 20px;
         }
 
         /* TEXTE D'ACCROCHE */
@@ -249,17 +255,12 @@
                 gap: 30px;
             }
 
-            .logo-container {
-                width: 240px;
-                height: 110px;
-            }
-
             .logo-name {
-                font-size: 48px;
+                font-size: 120px;
             }
 
             .logo-subtitle {
-                font-size: 18px;
+                font-size: 48px;
             }
 
             .intro-text p {
@@ -305,21 +306,16 @@
             }
 
             .top-section {
-                gap: 20px;
+                gap: 15px;
                 padding-top: 15px;
             }
 
-            .logo-container {
-                width: 220px;
-                height: 100px;
-            }
-
             .logo-name {
-                font-size: 44px;
+                font-size: 90px;
             }
 
             .logo-subtitle {
-                font-size: 16px;
+                font-size: 36px;
             }
 
             .intro-text p {
@@ -375,22 +371,16 @@
             }
 
             .top-section {
-                gap: 15px;
+                gap: 10px;
                 padding-top: 10px;
             }
 
-            .logo-container {
-                width: 180px;
-                height: 85px;
-                gap: 5px;
-            }
-
             .logo-name {
-                font-size: 36px;
+                font-size: 60px;
             }
 
             .logo-subtitle {
-                font-size: 14px;
+                font-size: 24px;
             }
 
             .intro-text p {
@@ -446,10 +436,8 @@
     <div class="container">
         <!-- SECTION HAUT - LOGO + TEXTE -->
         <div class="top-section">
-            <div class="logo-container">
-                <h1 class="logo-name">XXNOMXX</h1>
-                <p class="logo-subtitle">Graphic Designer</p>
-            </div>
+            <h1 class="logo-name">XXNOMXX</h1>
+            <p class="logo-subtitle">Graphic Designer</p>
             <div class="intro-text">
                 <p>Vous avez une idée, une marque, un projet ? Je vous accompagne dans sa création graphique.</p>
                 <p>De votre identité visuelle à vos supports de communication, ensemble nous créons une image cohérente et professionnelle.</p>
